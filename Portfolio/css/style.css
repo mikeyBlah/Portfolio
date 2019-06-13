@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-size: 1rem;
+}
+#mainWrap{
+    width: 100%;
+    background-image: linear-gradient(to right, #464b68, #936da3 );
+}
+.pageFull{
+    width: 100%;
+    padding: 40px 10%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.largeP{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10rem;
+    font-weight: 800;
+    color: #FAFAFA;
+    line-height: 140px;
+}
+.wrapper2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+}
+.colFull{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#meWrap{
+    min-width: 40%;
+}
+.mediumP{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.wrapperSkills{
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+.alternateBack{
+    background: #373651;
+}
+.skillCont{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+.skillHead{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+.pieOuter{
+    width: 200px;
+    height: 200px;
+    background: #52b2bf;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pieInner{
+    width: 180px;
+    height: 180px;
+    background: #373651;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
