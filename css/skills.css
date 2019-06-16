@@ -1,0 +1,115 @@
+#skillsWrap{
+    background: #373651;
+    height: 100vh;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapperSkills{
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+}
+.skillCont{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+.skillHead{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+.pieOuter{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.numberText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FAFAFA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pieEight {
+    display: block;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: dash 3s forwards 1;
+  }
+.pieFive {
+    display: block;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: dash2 3s forwards 1;
+  }
+  
+@keyframes dash {
+    from {
+      stroke-dashoffset: 600;
+    }
+    to {
+      stroke-dashoffset: 250;
+    }
+  }
+@keyframes dash2 {
+    from {
+      stroke-dashoffset: 600;
+    }
+    to {
+      stroke-dashoffset: 350;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .wrapperSkills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+    #skillsWrap{
+        padding: 20px 5%;
+    }
+    .skillCont{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .wrapperSkills{
+        margin-top: 0;
+    }
+    .pieOuter{
+        width: 120px;
+        height: 120px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .numberText{
+        font-size: 1.2rem; 
+    }
+    .skillHead{
+        font-size: 1.4rem;
+    }
+  }

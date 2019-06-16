@@ -1,0 +1,97 @@
+#footer{
+    background: #373651;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footHead{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FAFAFA;
+}
+.footHead::before{
+    position: absolute;
+    top: 50%;
+    left: -240px;
+    display: block;
+    width: 50%;
+    border-bottom: 3px solid #FAFAFA;
+    content: "";
+}
+.footHead::after{
+    position: absolute;
+    top: 50%;
+    right: -240px;
+    display: block;
+    width: 50%;
+    border-bottom: 3px solid #FAFAFA;
+    content: "";
+}
+.socialWrap{
+    display: flex;
+}
+.socialIcon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #a344a7;
+    margin: 20px;
+}
+#contactBtn{
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #FAFAFA;
+    margin: 20px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#contactBtn::before{
+    position: absolute;
+    content: "";
+    background: #a344a7;
+    padding: 40px 120px;
+    top: -20px;
+    left: -260px;
+    z-index: 0;
+    transition: all 0.5s ease-in-out;
+}
+#contactBtn:hover::before{
+    left: -20px;
+}
+.btnFont{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #FAFAFA;
+    z-index: 1;
+}
+#contactForm{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: #333333;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+.contactHide{
+    right: -100%;
+}
+.contactShow{
+    right: 0;
+}
+#backBtn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FAFAFA;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+}
