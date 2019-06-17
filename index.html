@@ -62,14 +62,28 @@
             <div id="footer">
                 <p class="footHead">THANKS FOR VISITING</p>
                 <div class="socialWrap">
-                    <div class="socialIcon"></div>
-                    <div class="socialIcon"></div>
+                    <div class="socialIcon">
+                        <img class="social" src="img/git.svg"/>
+                    </div>
+                    <div class="socialIcon">
+                        <img class="social" src="img/in.svg"/>
+                    </div>
                 </div>
                 <div id="contactBtn">
                     <p class="btnFont">CONTACT ME</p>
                 </div>
-                <div id="contactForm"class="contactHide">
-                    <div id="backBtn"></div>
+                <div id="contactFormWrap"class="contactHide">
+                    <div id="backBtn">
+                        <img src="img/arrowRight.svg"/>
+                    </div>
+                    <form id="contactForm">
+                        <div class="inputWrap">
+                            <input name="name" type="text" placeholder="Name" />
+                            <input name="email" type="text" placeholder="Email" />
+                            <textarea name="enquiry" placeholder="Enquiry"></textarea>
+                        </div> 
+                        <input class="btnFont" type="submit" value="SUBMIT"/>         
+                    </form>
                 </div>
             </div>
         </div>

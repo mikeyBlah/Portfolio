@@ -1,6 +1,6 @@
 window.onload = function(){
 let contactBtn = document.querySelector('#contactBtn');
-let contactForm = document.querySelector('#contactForm');
+let contactForm = document.querySelector('#contactFormWrap');
 let backBtn = document.querySelector('#backBtn');
 
 contactBtn.addEventListener("click", function(){
