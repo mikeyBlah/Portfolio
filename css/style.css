@@ -4,17 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 body{
     font-size: 1rem;
-    overflow-x: hidden; 
 }
 #mainWrap{
     width: 100%;
-    background-image: linear-gradient(to right, #464b68, #936da3 );
+    background: #FAFAFA;
 }
 .pageFull{
+    position: relative;
     width: 100%;
-    padding: 40px 10%;
+    padding: 10%;
     height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -26,7 +29,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 10rem;
     font-weight: 800;
-    color: #FAFAFA;
     line-height: 140px;
 }
 .wrapper2{
@@ -49,11 +51,16 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 800;
-    color: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+}
+.lightP{
+    color: #FAFAFA;
+}
+.darkP{
+    color: #373651;
 }
 .hide{
       display: none;
@@ -61,6 +68,8 @@ body{
 .arrowDown{
     cursor: pointer;
     position: relative;
+    align-self: center;
+    justify-self: flex-end;
 }
 .arrowDown:hover{
     animation: bounce 1s infinite;
@@ -76,6 +85,88 @@ body{
         transform: translateY(0);
     }
 }
+#sideMenu{
+    width: 50%;
+    height: 100vh;
+    background: #FAFAFA;
+    border-left: 60px solid #373651;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    transition: all 1s ease-in-out;
+}
+.hideMenu{
+    right: calc(-50% + 60px);
+}
+.showMenu{
+    right: 0;
+}
+#menuTab{
+    width: 80px;
+    height: 80px;
+    background: #373651;
+    position: relative;
+    right: 80px;
+    top: calc(50% - 40px);
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+.smallPara{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #FAFAFA;
+}
+#hamburWrap{
+    position: relative;
+    margin-top: 6px;
+    width: 15px;
+}
+.hamLine{
+    width: 2px;
+    height: 20px;
+    background: #FAFAFA;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+.hamLine:nth-of-type(1){
+    left: 0;
+    height: 12px;
+}
+.hamLine:nth-of-type(2){
+    left: 6px;
+    height: 20px;
+}
+.hamLine:nth-of-type(3){
+    left: 12px;
+    height: 14px;
+}
+#menuTab:hover .hamLine{
+    height: 20px;
+}
+#fixedOverlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #FAFAFA;
+    transition: all 1s ease-in-out;
+}
+.hideOverlay{
+    opacity: 0;
+    z-index: 0;
+}
+.showOverlay{
+    opacity: 0.8;
+    z-index: 3;
+}
+
+
 @media only screen and (max-width: 600px) {
     .largeP{
         font-size: 4rem;
@@ -105,5 +196,8 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    #sideMenu{
+        display: none;
     }
 }

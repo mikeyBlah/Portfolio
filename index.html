@@ -9,21 +9,33 @@
         <link rel="stylesheet" href="/css/footer.css">
         <script type="text/javascript" src="/js/animation.js" defer></script>
         <script type="text/javascript" src="/js/contactForm.js"></script>
+        <script type="text/javascript" src="/js/openSideNav.js"></script>
     </head>
     <body>
         <div id="mainWrap">
+            <div id="fixedOverlay" class="hideOverlay"></div>
             <div class="pageFull">
+                <div id="sideMenu" class="hideMenu">
+                    <div id="menuTab">
+                        <p class="smallPara">MENU</p>
+                        <div id="hamburWrap">
+                            <span class="hamLine"></span>
+                            <span class="hamLine"></span>
+                            <span class="hamLine"></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="wrapper2">
                     <div class="colFull">
-                        <p class="largeP">HELLO SYDNEY</p>
-                        <p class="mediumP">Something about me... Something about me... Something about me... Something about me... Something about me...</p>    
+                        <p class="largeP darkP">HELLO WO...</p>
+                        <p class="mediumP darkP">Hi there, my name's Mikey and I'm a frontend developer... Something about me... Something about me... Something about me... Something about me...</p>    
                     </div>
                     <img id="meWrap" src="/img/me.svg"/>
                 </div>
                 <img class="arrowDown" src="img/arrowDown.svg"/>
             </div>
             <div id="skillsWrap">
-                <p class="largeP">SKILLS</p>
+                <p class="largeP lightP">SKILLS</p>
                 <div class="wrapperSkills">
                     <div class="skillCont">
                         <p class="skillHead">HTML</p>
@@ -57,7 +69,6 @@
                     </div>
                 </div>
             </div>
-            <div class="pageFull"></div>
             <div class="pageFull"></div>
             <div id="footer">
                 <p class="footHead">THANKS FOR VISITING</p>
