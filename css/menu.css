@@ -1,0 +1,111 @@
+#sideMenu{
+    width: 50%;
+    height: 100vh;
+    background: #FAFAFA;
+    border-left: 60px solid #373651;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    transition: all 1s ease-in-out;
+    display: flex;
+}
+.hideMenu{
+    right: calc(-50% + 60px);
+}
+.showMenu{
+    right: 0;
+}
+#menuList{
+    align-self: center;
+    justify-self: center;
+}
+#menuList li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 140px;
+    color: #373651;
+    list-style: none;
+    line-height: 60px;
+}
+#menuList a{
+    text-decoration: none;
+}
+#menuTab{
+    width: 80px;
+    height: 80px;
+    background: #373651;
+    position: relative;
+    right: 80px;
+    top: calc(50% - 40px);
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+.smallPara{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #FAFAFA;
+}
+#hamburWrap{
+    position: relative;
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+}
+.menuLine{
+    width: 2px;
+    height: 20px;
+    background: #FAFAFA;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+.hamLine:nth-of-type(1){
+    left: 0;
+    height: 12px;
+}
+.hamLine:nth-of-type(2){
+    left: 6px;
+    height: 20px;
+}
+.hamLine:nth-of-type(3){
+    left: 12px;
+    height: 14px;
+}
+.closeLine:nth-of-type(1){
+    left: 10px;
+    height: 20px;
+    transform: rotate(-45deg);
+}
+.closeLine:nth-of-type(2){
+    opacity: 0;
+}
+.closeLine:nth-of-type(3){
+    left: 10px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+#menuTab:hover .hamLine{
+    height: 20px;
+}
+#fixedOverlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #FAFAFA;
+    transition: all 1s ease-in-out;
+}
+.hideOverlay{
+    opacity: 0;
+    z-index: 0;
+}
+.showOverlay{
+    opacity: 0.8;
+    z-index: 3;
+}
