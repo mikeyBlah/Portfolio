@@ -22,6 +22,7 @@ window.addEventListener("load", function(){
         },
     ]; 
 
+
     for(i = 0; i < slideArray.length; i++){
 
         newElm = document.createElement('div');
@@ -32,14 +33,22 @@ window.addEventListener("load", function(){
         newTitle.innerHTML = slideArray[i].title;
         newTitle.classList.add('largeP');
         newTitle.classList.add('darkP');
-        
-        assignOrder(i);
-
         newElm.appendChild(newTitle);
+
+        assignOrder(i);
     }
 
 
+    function changeArray(){
+    for(i = 0; i < slideArray.length; i++){
+
+        assignOrder(i);
+
+    }
+    }
+
     function assignOrder(iArray){
+        newElm.class = '';
         if (iArray === 0){
             newElm.classList.add('slideZero');
         }
@@ -51,17 +60,18 @@ window.addEventListener("load", function(){
         }
     }
 
-    function reArrange(num){
-        console.log(num);
-    }
-
+    Array.prototype.move = function reArrange(from, to) {
+        this.splice(to, 0, this.splice(from, 1)[0]);
+        changeArray();
+      };
     leftControl.addEventListener('click', function(){
-        reArrange(1);
+        slideArray.move(0, 2);
+        console.log(slideArray);
     });
     rightControl.addEventListener('click', function(){
-        reArrange(-1);
+        slideArray.move(2, 0);
+        console.log(slideArray);
     });
-
 
 
 });
