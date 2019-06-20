@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+$primaryFont: 'Montserrat', sans-serif;
+
+@mixin flex() {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex;/* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#mainWrap{
+    width: 100%;
+    background: #FAFAFA;
+}
+.pageFull{
+    position: relative;
+    width: 100%;
+    padding: 10%;
+    height: 100vh;
+    margin: 0 auto;
+    @include flex();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.largeP{
+    font-family: $primaryFont;
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 140px;
+}
+.wrapper2{
+    width: 100%;
+    @include flex();
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+}
+.colFull{
+    @include flex();
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#meWrap{
+    min-width: 40%;
+}
+.introP{
+    font-family: $primaryFont;
+    font-size: 2rem;
+    font-weight: 800;
+    @include flex();
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.lightP{
+    color: #FAFAFA;
+}
+.darkP{
+    color: #373651;
+}
+.hide{
+      display: none;
+  }
+.arrowDown{
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+}
+.arrowDown:hover{
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .largeP{
+        font-size: 4rem;
+        line-height: 80px;
+    }
+    .wrapper2{
+        width: 100%;
+        @include flex();
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+    .colFull{
+        @include flex();
+        justify-content: space-between;
+        flex-direction: column;
+        flex-grow: 0;
+    }
+    .introP{
+        font-size: 1.2rem;
+        padding: 10% 0;
+    }
+    #meWrap{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .pageFull{
+        width: 100%;
+        padding: 20px 5%;
+        height: 100vh;
+        margin: 0 auto;
+        @include flex();
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

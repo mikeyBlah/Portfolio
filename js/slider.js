@@ -4,6 +4,8 @@ window.addEventListener("load", function(){
     const leftControl = document.querySelector('#slideLeftCont');
     const rightControl = document.querySelector('#slideRightCont');
     let newElm;
+    let newTitle;
+    let newArray;
     let slideArray = [
         {
             title: "Project One",
@@ -28,8 +30,7 @@ window.addEventListener("load", function(){
         newElm = document.createElement('div');
         newElm.classList.add('slideProCont');
         elmContainer.appendChild(newElm);
-        
-        let newTitle = document.createElement('p');
+        newTitle = document.createElement('p');
         newTitle.innerHTML = slideArray[i].title;
         newTitle.classList.add('largeP');
         newTitle.classList.add('darkP');
@@ -39,16 +40,17 @@ window.addEventListener("load", function(){
     }
 
 
-    function changeArray(){
+    function changeClass(){
     for(i = 0; i < slideArray.length; i++){
-
+        console.log(i);
+        newElm.classList.remove('slideZero');
+        newElm.classList.remove('slideOne');
+        newElm.classList.remove('slideTwo');
         assignOrder(i);
-
-    }
+        }
     }
 
     function assignOrder(iArray){
-        newElm.class = '';
         if (iArray === 0){
             newElm.classList.add('slideZero');
         }
@@ -62,15 +64,17 @@ window.addEventListener("load", function(){
 
     Array.prototype.move = function reArrange(from, to) {
         this.splice(to, 0, this.splice(from, 1)[0]);
-        changeArray();
+        console.log(slideArray);
+        //slideArray[0, 1, 2].classList.remove('slideZero');
+        //slideArray[0, 1, 2].classList.remove('slideOne');
+        //slideArray[0, 1, 2].classList.remove('slideTwo');
+        changeClass();
       };
     leftControl.addEventListener('click', function(){
         slideArray.move(0, 2);
-        console.log(slideArray);
     });
     rightControl.addEventListener('click', function(){
         slideArray.move(2, 0);
-        console.log(slideArray);
     });
 
 

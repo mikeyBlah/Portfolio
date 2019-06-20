@@ -10,6 +10,8 @@ let visible = false;
         if(visible === false){
         sideMenu.classList.add('showMenu');
         sideMenu.classList.remove('hideMenu');
+        menuTab.classList.add('tabShow');
+        menuTab.classList.remove('tabHide');
         overlay.classList.add('showOverlay');
         overlay.classList.remove('hideOverlay');
         for (i = 0; i < spanLine.length; i++){
@@ -20,6 +22,8 @@ let visible = false;
         } else{
         sideMenu.classList.add('hideMenu');
         sideMenu.classList.remove('showMenu');
+        menuTab.classList.add('tabHide');
+        menuTab.classList.remove('tabShow');
         overlay.classList.add('hideOverlay');
         overlay.classList.remove('showOverlay');
         for (i = 0; i < spanLine.length; i++){
