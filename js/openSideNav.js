@@ -7,6 +7,8 @@ const spanLine = document.querySelectorAll('.menuLine');
 let visible = false;
 
     menuTab.addEventListener("click", function(){
+        menuTab.classList.remove('tabStart');
+        sideMenu.classList.remove('menuStart');
         if(visible === false){
         sideMenu.classList.add('showMenu');
         sideMenu.classList.remove('hideMenu');

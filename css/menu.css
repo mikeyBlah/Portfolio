@@ -4,6 +4,21 @@
     width: 20px;
     height: 20px;
 }
+#fixedOverlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #FAFAFA;
+    transition: all 1s ease-in-out;
+}
+.hideOverlay{
+    opacity: 0;
+    z-index: 0;
+}
+.showOverlay{
+    opacity: 0.8;
+    z-index: 3;
+}
 @media only screen and (min-width: 601px) {
     #sideMenu{
         width: 50%;
@@ -15,6 +30,9 @@
         top: 0;
         transition: all 1s ease-in-out;
         display: flex;
+    }
+    .menuStart{
+        right: calc(-50% + 60px);
     }
     .hideMenu{
         right: calc(-50% + 60px);
@@ -103,52 +121,127 @@
     #menuTab:hover .hamLine{
         height: 20px;
     }
-    #fixedOverlay{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background: #FAFAFA;
-        transition: all 1s ease-in-out;
-    }
-    .hideOverlay{
-        opacity: 0;
-        z-index: 0;
-    }
-    .showOverlay{
-        opacity: 0.8;
-        z-index: 3;
-    }
 }
 @media only screen and (max-width: 600px) {
     #sideMenu{
-        display: none;
+        width: 100%;
+        height: 100vh;
+        background: #FAFAFA;
+        position: fixed;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+    }
+    .menuStart{
+        top: -100vh;
+    }
+    .hideMenu{
+        animation: slideNavigationClose 1.2s forwards;
+    }
+    .showMenu{
+        animation: slideNavigationOpen 1.2s forwards;
+    }
+    @keyframes slideNavigationOpen {
+        0%   {top: -100vh;}
+        40%  {top: -100vh;}
+        100% {top: 0;}
+      }
+    @keyframes slideNavigationClose {
+        0%   {top: 0;}
+        100% {top: -100vh;}
+      }
+    #menuList{
+        align-self: center;
+        justify-self: center;
+    }
+    #menuList li{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 140px;
+        color: #373651;
+        list-style: none;
+        line-height: 60px;
+    }
+    #menuList a{
+        text-decoration: none;
     }
     #menuTab{
         font-family: 'Montserrat', sans-serif;
         font-size: 0.8rem;
         font-weight: 400;
         color: #FAFAFA;
-        width: 80px;
-        height: 80px;
         background: #373651;
         position: fixed;
-        border-radius: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         z-index: 6;
-        transition: all 1s ease-in-out;
         color: #FAFAFA;
-        top: 20px;
     }
     .tabShow{
-        right: calc(50% - 40px);
+        animation: tabOpen 0.5s forwards;
+        -webkit-animation: tabOpen 0.5s forwards;
     }
     .tabHide{
-        right: 12px;
+        animation: tabClose 1s forwards;
+        -webkit-animation: tabClose 1s forwards;
     }
+    .tabStart{
+        right: 12px;
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        border-radius: 80px;
+    }
+    @keyframes tabClose {
+        0%   {
+            right: 0;
+            border-radius: 0px;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            border-radius: none;
+        }
+        60%  {
+            right: 0;
+            border-radius: 0px;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            border-radius: none;
+        }
+        100% {
+            right: 12px;
+            width: 80px;
+            height: 80px;
+            top: 20px;
+            border-radius: 80px;
+        }
+      }
+    #hamburWrap{
+        transform: rotate(90deg);
+    }
+    @keyframes tabOpen {
+        0%   {
+            right: 12px;
+            width: 80px;
+            height: 80px;
+            top: 20px;
+            border-radius: 80px;
+        }
+        100% {
+            right: 0;
+            border-radius: 0px;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            border-radius: none;
+        }
+      }
     #hamburWrap{
         transform: rotate(90deg);
     }
