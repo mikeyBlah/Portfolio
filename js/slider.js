@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 
-    const elmContainer = document.querySelector('#slideElmContainer');
+    const carousel = document.querySelector('#carousel');
     const leftControl = document.querySelector('#slideLeftCont');
     const rightControl = document.querySelector('#slideRightCont');
     let newElm;
@@ -29,7 +29,7 @@ window.addEventListener("load", function(){
 
         newElm = document.createElement('div');
         newElm.classList.add('slideProCont');
-        elmContainer.appendChild(newElm);
+        carousel.appendChild(newElm);
         newTitle = document.createElement('p');
         newTitle.innerHTML = slideArray[i].title;
         newTitle.classList.add('largeP');
